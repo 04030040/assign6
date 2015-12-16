@@ -86,6 +86,7 @@ void draw()
 			}
 		}
 		// 這地方應該加入Fighter 血量顯示UI
+            hpDisplay.updateWithFighterHP(fighter.hp);
 		
 	}
 	else if (state == GameState.END) {
@@ -132,8 +133,8 @@ void keyReleased(){
 		flameMgr = new FlameMgr();
 		treasure = new Treasure();
 		fighter = new Fighter(20);
+            hpDisplay = new HPDisplay();
       default : break ;
     }
   }
 }
-
