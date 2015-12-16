@@ -23,11 +23,15 @@ class Enemy{
 
 	boolean isCollideWithFighter()
 	{
+      if(isHit(this.x, this.y, this.enemyImg.width, this.enemyImg.height,
+      fighter.x, fighter.y, fighter.fighterImg.width, fighter.fighterImg.height))
+      {return true;}
 		return false;
 	}
 
 	boolean isOutOfBorder()
 	{
+      if(this.x>width){return true;}
 		return false;
 	}
 
