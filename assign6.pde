@@ -104,6 +104,7 @@ void draw()
       {
         bullets[i].move();
         bullets[i].draw();
+        if (bullets[i].isOutOfBorder()) {bullets[i]=null;}
       }
     }
     
