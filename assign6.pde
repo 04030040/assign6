@@ -83,14 +83,15 @@ void draw()
           flameMgr.addFlame(enemys[i].x, enemys[i].y);
           enemys[i]=null;
         }
+ else if (enemys[i].isOutOfBorder()) {
+          enemys[i]=null;
+        }
+        
+        if (enemys[i]!= null){
         if (enemys[i].isCollideWithBullet()) {
           flameMgr.addFlame(enemys[i].x, enemys[i].y);
           enemys[i]=null;
         }
-        
-        
-        else if (enemys[i].isOutOfBorder()) {
-          enemys[i]=null;
         }
       }
     }
